@@ -4,13 +4,13 @@ import TodoForm from "./TodoForm";
 import styles from "./TodoList.module.css";
 
 const TodoList = ({ todos, onCompelete, onDelete, onUpdateTodo }) => {
-  const [edit, setEdit] = useState({id: null , text : "", isCompleted: false})
+  const [edit, setEdit] = useState({ id: null, text: "", isCompleted: false });
 
+  const editTodo = (newValue) => {
+    onUpdateTodo(edit.id, newValue);
+    setEdit({ id: null, text: "", isCompleted: false })
+  };
 
-  const editTodo = () => {
-    onUpdateTodo(edit.id)
-  }
-  
   const renderHandler = () => {
     if (todos.length === 0) {
       return <p>Add some todos</p>;
@@ -28,7 +28,15 @@ const TodoList = ({ todos, onCompelete, onDelete, onUpdateTodo }) => {
     });
   };
 
-  return <div className={styles.todosContainer}>{edit.id?   <TodoForm submitTodo={editTodo}/> : renderHandler()}</div>;
+  return (
+    <div className={styles.todosContainer}>
+      {edit.id ? (
+        <TodoForm submitTodo={editTodo} edit={edit} />
+      ) : (
+        renderHandler()
+      )}
+    </div>
+  );
 };
 
 export default TodoList;
