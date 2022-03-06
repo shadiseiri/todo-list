@@ -2,7 +2,7 @@ import {useState} from "react"
 import styles from "./TodoForm.module.css"
 
 
-const TodoForm = (props) => {
+const TodoForm = ({submitTodo}) => {
 const [input,setInput] = useState("")
 
 const changeHandler = (e) => {
@@ -14,7 +14,7 @@ if (input === "") {
     alert("pelase type some todo")
     return
 }
-props.addTodoHandler(input)
+submitTodo(input)
 setInput("")
 }
 
