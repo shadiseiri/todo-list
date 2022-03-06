@@ -1,13 +1,20 @@
 import Todo from "./Todo";
-import styles from "./TodoList.module.css"
+import styles from "./TodoList.module.css";
 
-const TodoList = ({ todos , onCompelete }) => {
+const TodoList = ({ todos, onCompelete, onDelete }) => {
   const renderHandler = () => {
     if (todos.length === 0) {
       return <p>Add some todos</p>;
     }
     return todos.map((todo) => {
-      return <Todo key={todo.id} todo={todo} onCompelete={()=> onCompelete(todo.id)} />;
+      return (
+        <Todo
+          key={todo.id}
+          todo={todo}
+          onCompelete={() => onCompelete(todo.id)}
+          onDelete={() => onDelete(todo.id)}
+        />
+      );
     });
   };
 

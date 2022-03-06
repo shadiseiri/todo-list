@@ -7,9 +7,9 @@
     padding: 10px;
 }
 
-/* .todo {
-    margin-right:10px ;
-} */
+.todo {
+    cursor: pointer;
+}
 
 
 
@@ -26,4 +26,5 @@
 .completed{
     text-decoration: line-through;
     color: #ccc;
+    cursor: pointer;
 }
