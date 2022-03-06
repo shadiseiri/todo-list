@@ -11,24 +11,42 @@
 
 .form{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    margin-top: 20px;
 }
-.form button{
+.addTodo{
+    margin-left: 10px;
+    background-color: #059669;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: 1px solid #059669;
+    color: #fff;
+}
+
+.update{
     margin-left: 10px;
     background-color: #fff;
     border-radius: 5px;
     padding: 5px 15px;
     border: 1px solid #059669;
+    color: #059669;
 }
+
+
 
 .form input{
     outline:none;
     border: 1px solid #059669;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 3px;
     background-color: #fff;
+    width: 200px;
 
 }
 
 .form input:focus{
     border: 2px solid #059669;   
 }
+

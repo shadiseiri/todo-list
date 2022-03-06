@@ -14,12 +14,19 @@
 
 
 
-.todoContainer button{
-    margin-left: 10px;
+.btn{
     background-color: #fff;
     border-radius: 5px;
     padding: 5px 15px;
     border: 1px solid #059669;
+    color: #059669;
+}
+
+
+.remove{
+    margin-left: 10px;
+    color: rgb(236,68,68);
+    border: 1px solid rgb(236,68,68);
 }
 
 

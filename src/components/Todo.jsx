@@ -7,8 +7,8 @@ const Todo = ({ todo , onCompelete , onDelete , onEdit}) => {
     <div className={styles.todoContainer}>
       <div className={todo.isComplete ? `${styles.completed}` : `${styles.todo}`} onClick={onCompelete}>{todo.text}</div>
       <div>
-        <button onClick={onEdit} >Edit</button>
-        <button onClick={onDelete}>delete</button>
+        <button onClick={onEdit} className={styles.btn} >Edit</button>
+        <button onClick={onDelete} className={`${styles.btn} ${styles.remove}`} >Delete</button>
       </div>
     </div>
   );

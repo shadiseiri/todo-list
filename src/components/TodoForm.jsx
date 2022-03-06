@@ -25,7 +25,7 @@ setInput("")
   return (
     <form onSubmit={submitHandler} className={styles.form}>
       <input type="text" value={input} onChange={changeHandler} placeholder="add a todo"  ref={inputRef}/>
-      <button type="submit">{edit? "Update" : "Add"}</button>
+      <button type="submit" className={edit? styles.update: styles.addTodo} >{edit? "Update" : "Add"}</button>
     </form>
   );
 };
