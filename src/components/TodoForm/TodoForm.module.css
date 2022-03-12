@@ -38,7 +38,7 @@
 
 .form input{
     outline:none;
-    border: 1px solid #059669;
+    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 5px 3px;
     background-color: #fff;
@@ -47,6 +47,6 @@
 }
 
 .form input:focus{
-    border: 2px solid #059669;   
+    border: 2px solid rgba(204, 204, 204, 0.857);   
 }
 

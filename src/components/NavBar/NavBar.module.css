@@ -1,0 +1,40 @@
+.badge{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #c1f3dc;
+    color: #059669;
+    font-size: 16px;
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-top: 5px;
+}
+
+
+
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+
+.header h2{
+margin-right: 10px;
+font-size: 16px;
+
+}
+
+.select{
+    width: 10rem;
+    margin-top: 10px;
+    outline: none;
+}
+
+.select :focus{
+    border: 2px solid rgba(204, 204, 204, 0.857);   
+}
+
